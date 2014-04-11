@@ -15,7 +15,6 @@ public class MainActivity extends Activity {
 	}
 
 	public void test(View view){
-		
 		startService(new Intent(this,RIntentService.class));  
 	}
 
