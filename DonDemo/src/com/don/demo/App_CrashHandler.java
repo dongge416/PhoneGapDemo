@@ -166,8 +166,9 @@ public class App_CrashHandler implements UncaughtExceptionHandler{
 		// 保存文件
 		long timetamp = System.currentTimeMillis();
 		String time = format.format(new Date());
-		String fileName = "crash-" + time + "-" + timetamp + ".log";
+		final String fileName = "crash-" + time + "-" + timetamp + ".log";
 		final String info = sb.toString(); 
+		final String title = "Demo程序奔溃日志"; 
 		new Thread(new Runnable() {
 			
 			@Override
@@ -178,11 +179,11 @@ public class App_CrashHandler implements UncaughtExceptionHandler{
 				  mailInfo.setMailServerHost("smtp.163.com"); 
 				  mailInfo.setMailServerPort("25"); 
 				  mailInfo.setValidate(true); 
-				  mailInfo.setUserName("send@163.com"); 
-				  mailInfo.setPassword("*********");//您的邮箱密码 
-				  mailInfo.setFromAddress("send@163.com"); 
-				  mailInfo.setToAddress("recv@qq.com"); 
-				  mailInfo.setSubject("程序出现奔溃:"); 
+				  mailInfo.setUserName("dongge416testdroid@163.com"); 
+				  mailInfo.setPassword("testdroid");//您的邮箱密码 
+				  mailInfo.setFromAddress("dongge416testdroid@163.com"); 
+				  mailInfo.setToAddress("591547708@qq.com"); 
+				  mailInfo.setSubject("Demo程序奔溃日志"); 
 				  mailInfo.setContent(info); 
 			        //这个类主要来发送邮件
 				  SimpleMailSender sms = new SimpleMailSender();
@@ -194,20 +195,7 @@ public class App_CrashHandler implements UncaughtExceptionHandler{
 		}).start();
 		
 //	     //这个类主要是设置邮件
-//		  MailSenderInfo mailInfo = new MailSenderInfo(); 
-//		  mailInfo.setMailServerHost("smtp.163.com"); 
-//		  mailInfo.setMailServerPort("25"); 
-//		  mailInfo.setValidate(true); 
-//		  mailInfo.setUserName("dongge416@163.com"); 
-//		  mailInfo.setPassword("82702083a");//您的邮箱密码 
-//		  mailInfo.setFromAddress("dongge416@163.com"); 
-//		  mailInfo.setToAddress("591547708@qq.com"); 
-//		  mailInfo.setSubject("程序出现奔溃:"+fileName); 
-//		  mailInfo.setContent(sb.toString()); 
-//	        //这个类主要来发送邮件
-//		  SimpleMailSender sms = new SimpleMailSender();
-////	         sms.sendTextMail(mailInfo);//发送文体格式
-//		  		sms.sendTextMail(mailInfo);
+
 		Log.e("", "=============");
 		
 //		FileUtil.creatDir(Environment.getExternalStorageDirectory()+"/hgsoft/OperateManager/");

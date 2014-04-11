@@ -9,7 +9,7 @@ public class RApp extends Application{
 		// TODO Auto-generated method stub
 		super.onCreate();
 		App_CrashHandler app_CrashHandler = App_CrashHandler.getInstance();
-		app_CrashHandler.init(getApplicationContext());
+//		app_CrashHandler.init(getApplicationContext());
 	}
 	
 }
