@@ -1,0 +1,41 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>Js2JavaTest</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../master.css" type="text/css" media="screen" title="no title">
+	<script type="text/javascript" charset="utf-8" src="../cordova.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../main.js"></script>
+	<script type="text/javascript">
+	
+	
+	
+		function testMethod(params, success, fail){};    
+			testAndroid01API.prototype.test = function(params, success, fail){
+	    	return PhoneGap.exec(
+		                function(args){
+		                    success(args);
+		                }, 
+		                function(args){
+		                    fail(args);
+		                }, 
+		                'test01', //java类
+		                'test',    //action
+		                [params]    //params
+			    );
+		};
+	
+		PhoneGap.addConstructor(function() {
+		    PhoneGap.addPlugin('testAndroid01API', new testAndroid01API());
+		});
+		
+	
+	</script>
+	
+	
+	
+</head>
+<body>
+	
+</body>
+</html>

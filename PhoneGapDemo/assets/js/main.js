@@ -167,3 +167,6 @@ function init() {
     // document.addEventListener("touchmove", preventBehavior, false);
     document.addEventListener("deviceready", deviceInfo, true);
 }
+
+
+

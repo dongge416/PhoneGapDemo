@@ -96,11 +96,13 @@
       <param name="android-package" value="org.apache.cordova.Echo"/>
     </feature>
     <feature name="Globalization">
-      <param name="android-package" value="org.apache.cordova.Globalization"/>
+      <param name="android-package" value="org.apache.cordova.Globaliza"/>
     </feature>
     <feature name="InAppBrowser">
       <param name="android-package" value="org.apache.cordova.InAppBrowser"/>
     </feature>
+    
+    <plugin name="Js2JavaPlus" value="com.don.phonegapdemo.Js2JavaPlus"/>
          
 </widget>
 
