@@ -24,12 +24,10 @@ public class Js2JavaPlus extends Plugin {
 
 				jsonObj.put("testData1", testData1 + " after Plugin");
 				jsonObj.put("testData2", testData2 + " after Plugin");
-
 				result = new PluginResult(PluginResult.Status.OK, jsonObj);
 				// 返回成功时，将Java代码处理过的JSON数据返回给JS
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
-
 				e.printStackTrace();
 			}
 
